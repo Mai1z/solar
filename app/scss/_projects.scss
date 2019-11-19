@@ -1,0 +1,65 @@
+
+// ======== Projects =========
+
+.projects {
+  width: 100%;
+  background-image: url(../img/realised-projects/bg.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.projects__inner {
+  padding-top: 50px;
+  padding-bottom: 100px;
+    h2 {
+      color: $second-font-color;
+    }
+    h2:before {
+      background-color: #fff;
+    }
+
+}
+
+.projects-inner__header {
+  display: flex;
+  align-items: center;
+}
+
+.projects-inner-header__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid $second-font-color;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.project-inner__items {
+  display: flex;
+  height: 408px;
+  margin: 50px -15px 0 -15px;
+}
+
+.project-inner__item {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  max-width: 270px;
+  box-shadow: 0px 0px 15px rgba(51, 50, 59, 0.2);
+  border-radius: 20px;
+  margin: 0 15px;
+    img {
+      width: 101%;
+      border-radius: 20px;
+      height: auto;
+      margin: -1px;
+    }
+    h4 {
+      margin: 15px 16px 0 16px;
+    }
+    p {
+      margin: 18px 16px 0 16px;
+    }
+}

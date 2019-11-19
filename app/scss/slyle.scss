@@ -30,11 +30,28 @@ h1 {
 h2 {
 	font-size: 27px;
 	font-weight: 500;
+	position: relative;
+}
+
+h2:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	height: 4px;
+	width: 60px;
+	background-color: $main-bgcolor;
 }
 
 h3 {
 	font-size: 18px;
 }
+
+h4 {
+	font-size: 18px;
+	font-weight: 300;
+}
+
 
 p {
 	padding: 0;
@@ -72,6 +89,7 @@ button {
 	border-radius: 50px;
 	border: none;
 	color: $second-font-color;
+	cursor: pointer;
 }
 
 .container {
@@ -81,4 +99,12 @@ button {
 	padding: 0 10px;
 }
 
+.grey {
+	background-color: $second-bgcolor;
+}
+
+
 @import 'header';
+@import 'intro';
+@import 'projects';
+@import 'pluses';
