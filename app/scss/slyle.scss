@@ -1,22 +1,84 @@
-div,
-input,
-button,
-textarea,
-span,
-section,
-main,
-hr,
-*::before,
-*::after {
+$main-bgcolor: #FF6B00;
+$second-bgcolor: #C4C4C4;
+$elem-bgcolor: #33323B;
+$main-font: 'Proxima Nova';
+$main-font-color: #33323B;
+$second-font-color: #ffffff;
+
+:root {
 	box-sizing: border-box;
 }
 
-:root {
-	--clr-main: #343953;
-	--clr-active: #ff5927;
-	--clr-background-active: #fff;
-	--clr-background-form: #d6d8e3;
-	--clr-helper: #c4c4c4;
-	--clr-background: #f7f7f7;
+*,
+::before,
+::after {
+	box-sizing: inherit;
+	padding: 0;
 }
-	
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+	font-family: $main-font;
+}
+
+h1 {
+	font-size: 31px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 27px;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+	font-family: $main-font;
+	font-size: 13px;
+}
+
+a {
+	padding: 0;
+	margin: 0;
+	color: $main-font-color;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: $main-font;
+	transition: 0.2s linear;
+	font-size: 13px;
+}
+
+a:hover {
+	color: $main-bgcolor;
+}
+
+body {
+	font-family: $main-font;
+	color: $main-font-color;
+	font-size: 12px;
+	font-weight: 300;
+	margin: 0;
+}
+
+button {
+	padding: 14px 23px;
+	background-color: $main-bgcolor;
+	border-radius: 50px;
+	border: none;
+	color: $second-font-color;
+}
+
+.container {
+	max-width: 1190px;
+	width: 100%;
+	margin: 0 auto; 
+	padding: 0 10px;
+}
+
+@import 'header';
