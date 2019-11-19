@@ -1,0 +1,16 @@
+div,
+input,
+button,
+textarea,
+span,
+section,
+main,
+hr,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-main: #343953;
+}
