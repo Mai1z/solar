@@ -319,3 +319,135 @@ button {
   max-width: 100%;
   max-height: 100%;
 }
+
+.news__inner {
+  margin-bottom: 120px;
+}
+
+.news__inner h2 {
+  margin-bottom: 45px;
+}
+
+.news-inner__items {
+  display: flex;
+  margin: 0 -7px;
+}
+
+.news-inner__item {
+  width: 100%;
+  max-width: 300px;
+  min-height: 178px;
+  border-radius: 20px;
+  padding: 20px 15px 17px 15px;
+  transition: 0.2s linear;
+  cursor: pointer;
+  margin: 0 7px;
+}
+
+.news-inner__item h5 {
+  font-size: 13px;
+  color: #C4C4C4;
+  margin-bottom: 30px;
+  transition: 0.2s linear;
+}
+
+.news-inner__item p {
+  font-size: 16px;
+}
+
+.news-inner__item:hover {
+  background-color: #FF6B00;
+  color: #ffffff;
+}
+
+.news-inner__item:hover h5 {
+  color: #ffffff;
+}
+
+.selection__inner {
+  margin-bottom: 75px;
+}
+
+.selection-inner__calc {
+  margin-top: 50px;
+  width: 100%;
+  min-height: 600px;
+  box-shadow: 0px 0px 10px #FF6B00;
+  border: 3px solid #FF6B00;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #33323B;
+}
+
+.footer {
+  padding: 20px 0 40px 0;
+}
+
+.footer p {
+  font-size: 11px;
+  color: #C4C4C4;
+  margin-top: -25px;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__item {
+  width: 100%;
+  max-width: 210px;
+  color: #ffffff;
+}
+
+.footer__item ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.footer__item ul li {
+  margin-bottom: 15px;
+}
+
+.footer__item ul li a {
+  color: #ffffff;
+  text-transform: none;
+  font-size: 13px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer__item h4 {
+  margin-top: 15px;
+}
+
+.footer__item p {
+  font-size: 12px;
+  margin-bottom: 17px;
+  margin-top: 10px;
+}
+
+.footer__item a {
+  font-size: 18px;
+  text-decoration: underline;
+  color: #FF6B00;
+  text-transform: none;
+}
+
+.footer__item button {
+  margin-top: 25px;
+  background-color: transparent;
+  border: 1px solid #FF6B00;
+  font-size: 13px;
+}
+
+.footer-item__social {
+  margin-top: 35px;
+  display: flex;
+}
+
+.footer-item__social object {
+  margin-right: 20px;
+}
