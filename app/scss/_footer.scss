@@ -33,8 +33,16 @@ footer {
               text-transform: none;
               font-size: 13px;
               text-decoration: none;
-              margin-left: 20px;
+              margin-left: 10px;
+                &:hover {
+                  color: $main-bgcolor;
+                } 
             }
+            &:before {
+              content: "\e903";
+              font-family: 'icomoon';
+              color: $main-bgcolor;
+            }  
         }
     }
     h4 {

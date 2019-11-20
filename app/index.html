@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Solargy</title>
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
 	<link rel="stylesheet" href="css/slyle.css">
-	<link rel="stylesheet" href="css/icons.css">
+	
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 						<li><a href="#">Помощь</a></li>
 					</ul>
 					<div class="header-firstline__contacts">
-						<a href="#">8 800 200 7 298</a>
+						<a class="header-firstline-contacts__free" href="#">8 800 200 7 298</a>
 						<a href="#">+7 (3412) 570 289</a>
 					</div>
 				</div>
@@ -35,7 +36,7 @@
 					<div class="header-secondline__about">
 						<img src="img/header/logo.png" alt="logo">
 						<ul>
-							<li><object data="img/header/burger.svg" type="image/svg+xml"></object><a href="#">КАТАЛОГ световодов</a></li>
+							<li><a class="header__catalog" href="#">КАТАЛОГ световодов</a></li>
 							<li><a href="#">Установка и сервис</a></li>
 							<li><a href="#">О компании</a></li>
 							<li><a href="#">Портфолио</a></li>
@@ -53,7 +54,7 @@
 	<section class="intro">
 		<div class="container">
 			<div class="intro__inner">
-				<h1><object data="img/intro/c.svg" type="image/svg+xml"></object>Знаете что такое световоды</h1>
+				<h1>Знаете что такое световоды</h1>
 				<div class="intro-inner__buttons">
 					<button class="grey" >Нет</button>
 					<button>Да</button>
@@ -72,8 +73,7 @@
 					<article>
 						<h2>Реализованные проекты</h2>
 					</article>
-					<div class="projects-inner-header__circle">
-						<object data="img/realised-projects/arrow.svg" type="image/svg+xml"></object>
+					<div class="projects-inner-header circle">
 					</div>
 				</div>
 
@@ -159,7 +159,10 @@
 	<section class="news">
 		<div class="container">
 			<div class="news__inner">
-				<h2>Новости</h2>
+				<div class="news-inner__head">
+					<h2>Новости</h2>
+					<div class="news-inner-head circle"></div>
+				</div>
 				<div class="news-inner__items">
 					<div class="news-inner__item">
 						<h5>07 Июл 2019</h5>
@@ -189,6 +192,87 @@
 			<div class="selection__inner">
 				<h2>Подбор световодов</h2>
 				<div class="selection-inner__calc">
+
+					<div class="selection-inner__text">
+						<p>Название здания</p>
+						<p>Площадь помещения</p>
+						<p>Высота этажа</p>
+						<p>Система проветривания (вентиляция)</p>
+						<p>Искусственное освещение</p>
+						<p>Монтаж через этаж</p>
+						<p>Ваш город или широта</p>
+					</div>
+
+					<form class="selection-inner__form">
+						<select name="type" id="type">
+							<option value="1">Производственное</option>
+							<option value="2">Техническое</option>
+							<option value="3">Производственное</option>
+							<option value="4">Производственное</option>
+						</select>
+						<select name="space" id="space">
+							<option value="1">до 50 кв. м</option>
+							<option value="2">до 150 кв. м</option>
+							<option value="3">до 250 кв. м</option>
+							<option value="4">до 500 кв. м</option>
+						</select>
+
+						<div class="selection-inner-form__radio">
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-h_1" type="radio" name="height">
+								<label class="selection-inner-form-radio__label" for="radio-h_1">до 3х м</label>
+							</div>
+
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-h_2" type="radio" name="height">
+								<label class="selection-inner-form-radio__label" for="radio-h_2">более 3х м</label>
+							</div>
+						</div>
+
+						<div class="selection-inner-form__radio">
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-vent_1" type="radio" name="ventilation">
+								<label class="selection-inner-form-radio__label" for="radio-vent_1">Да</label>
+							</div>
+
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-vent_2" type="radio" name="ventilation">
+								<label class="selection-inner-form-radio__label" for="radio-vent_2">Нет</label>
+							</div>
+						</div>
+
+						<div class="selection-inner-form__radio">
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-light_1" type="radio" name="light">
+								<label class="selection-inner-form-radio__label" for="radio-light_1">Да</label>
+							</div>
+
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-light_2" type="radio" name="light">
+								<label class="selection-inner-form-radio__label" for="radio-light_2">Нет</label>
+							</div>
+						</div>
+
+						<div class="selection-inner-form__radio">
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-across_1" type="radio" name="across">
+								<label class="selection-inner-form-radio__label" for="radio-across_1">Да</label>
+							</div>
+
+							<div class="selection-inner-form-radio__item">
+								<input class="selection-inner-form-radio__input" id="radio-across_2" type="radio" name="across">
+								<label class="selection-inner-form-radio__label" for="radio-across_2">Нет</label>
+							</div>
+						</div>
+
+						<input class="selection-inner-form__town" placeholder="Ваш город" type="text">
+						
+					</form>
+					<button id="selection-choose">Подобрать световод</button>
+
+					<div class="selection-inner__result">
+
+					</div>
 
 				</div>
 			</div>

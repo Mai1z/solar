@@ -25,15 +25,9 @@
   align-items: center;
 }
 
-.projects-inner-header__circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 58px;
-  height: 58px;
+.projects-inner-header.circle {
   border: 1px solid $second-font-color;
-  border-radius: 50%;
-  margin-left: 20px;
+  color: $second-font-color;
 }
 
 .project-inner__items {

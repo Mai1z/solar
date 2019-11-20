@@ -25,26 +25,35 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
 	font-size: 31px;
 	font-weight: 700;
+	position: relative;
+		&:before {
+			content: '\e901';
+			font-family: 'icomoon';
+			color: $main-bgcolor;
+			font-size: 52px;
+			position: absolute;
+			left: -24px;
+			top: -3px;
+		}
 }
 
 h2 {
 	font-size: 27px;
 	font-weight: 500;
 	position: relative;
-}
-
-h2:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	height: 4px;
-	width: 60px;
-	background-color: $main-bgcolor;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			height: 4px;
+			width: 60px;
+			background-color: $main-bgcolor;
+		}
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 21px;
 }
 
 h4 {
@@ -69,10 +78,9 @@ a {
 	font-family: $main-font;
 	transition: 0.2s linear;
 	font-size: 13px;
-}
-
-a:hover {
-	color: $main-bgcolor;
+		&:hover {
+			color: $main-bgcolor;
+		}
 }
 
 body {
@@ -90,6 +98,7 @@ button {
 	border: none;
 	color: $second-font-color;
 	cursor: pointer;
+	transition: 0.2s linear;
 }
 
 .container {
@@ -101,6 +110,27 @@ button {
 
 .grey {
 	background-color: $second-bgcolor;
+}
+
+.circle {
+  width: 58px;
+  height: 58px;
+  border: 1px solid $second-bgcolor;
+  border-radius: 50%;
+	margin-left: 20px;
+	color: $second-bgcolor;
+	position: relative;
+		&:before {
+			position: absolute;
+			content: "\e900";
+			font-family: 'icomoon';
+			left: 35%;
+			top: 40%;
+		}
+}
+
+.active {
+  display: block;
 }
 
 

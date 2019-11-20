@@ -27,7 +27,15 @@
       margin-left: 35px;
       font-size: 18px;
       font-weight: 700;
+      position: relative;
     }
+}
+
+.header-firstline-contacts__free:before {
+  content: "\e958";
+  font-family: 'icomoon';
+  position: absolute;
+  left: -20px;
 }
 
 .header__secondline {
@@ -43,25 +51,28 @@
       display: flex;
       justify-content: space-between;
       list-style-type: none;
-      margin-left: 20px;
+      margin-left: 30px;
       padding-top: 5px;
-        
-        li:first-child {
-          font-weight: 700;
-        }
         li {
           margin-right: 35px;
           display: flex;
           align-items: center;
-            object {
-              margin-right: 5px;
-              width: 17px;
-              height: 12px;
-            }
         }
+
         li:last-child {
           margin-right: 0px;
-        }
-        
+        }       
+    }
+}
+
+.header__catalog {
+  font-weight: 700;
+  position: relative;
+    &:before {
+      content: "\f0c9";
+      font-family: 'icomoon';
+      position: absolute;
+      left: -14px;
+      top: 1px;
     }
 }
