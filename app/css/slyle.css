@@ -418,7 +418,7 @@ button {
   margin-bottom: 75px;
 }
 
-.selection-inner__calc {
+.selection__calc {
   display: flex;
   padding: 40px;
   margin-top: 50px;
@@ -430,75 +430,72 @@ button {
   transition: 0.4s linear;
 }
 
-.selection-inner__text {
-  margin-right: 70px;
-  margin-top: 10px;
+.selection-calc__form {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(7, 60px);
 }
 
-.selection-inner__text p {
-  margin-bottom: 40px;
+.selection-calc-form__item {
+  display: flex;
+  align-items: center;
+}
+
+.selection-calc-form__item p {
   font-size: 15px;
 }
 
-.selection-inner__form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 270px;
-}
-
-.selection-inner__form select {
+.selection-calc-form__item select {
   padding: 10px 18px;
   border-radius: 30px;
-  margin-bottom: 20px;
   border: 1px solid #C4C4C4;
+  width: 100%;
 }
 
-.selection-inner__form button {
+.selection-calc-form__btn {
+  display: flex;
+  align-items: flex-end;
+}
+
+.selection-calc-form__btn button {
+  width: 100%;
   background-color: transparent;
   border: 1px solid #FF6B00;
   color: #33323B;
 }
 
-.selection-inner__form button:hover {
+.selection-calc-form__btn button:hover {
   background-color: #FF6B00;
   color: #ffffff;
 }
 
-.selection-inner-form__radio {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 32px;
+.selection-form__town {
+  border: 1px solid #C4C4C4;
+  padding: 10px 18px;
+  border-radius: 30px;
   width: 100%;
 }
 
-.selection-inner-form-radio__item {
+.selection-form-radio__item {
   display: flex;
   align-items: center;
   min-width: 100px;
   margin-right: 10px;
 }
 
-.selection-inner-form-radio__item input {
+.selection-form-radio__item input {
   margin-right: 10px;
 }
 
-.selection-inner-form__town {
-  border: 1px solid #C4C4C4;
-  padding: 10px 18px;
-  border-radius: 30px;
-  margin-bottom: 65px;
-}
-
-.selection-inner-form-radio__input {
+.selection-form-radio__input {
   appearance: none;
   -webkit-appearance: none;
   position: absolute;
 }
 
-.selection-inner-form-radio__label {
+.selection-form-radio__label {
   padding-left: 30px;
   cursor: pointer;
   position: relative;
@@ -506,7 +503,7 @@ button {
   transition: 0.3s linear;
 }
 
-.selection-inner-form-radio__label:before {
+.selection-form-radio__label:before {
   content: '';
   display: block;
   width: 20px;
@@ -518,7 +515,7 @@ button {
   left: 0;
 }
 
-.selection-inner-form-radio__label:after {
+.selection-form-radio__label:after {
   content: '';
   display: block;
   width: 20px;
@@ -534,24 +531,30 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-.selection-inner-form-radio__input:checked + .selection-inner-form-radio__label:after {
+.selection-form-radio__input:checked + .selection-form-radio__label:after {
   opacity: 1;
 }
 
-.selection-inner-form-radio__input:checked + .selection-inner-form-radio__label {
+.selection-form-radio__input:checked + .selection-form-radio__label {
   color: #FF6B00;
 }
 
-.selection-inner__result {
-  display: none;
+.selection-calc__result {
   opacity: 0;
   width: 100%;
-  max-width: 570px;
+  max-width: 100%;
   background-color: #FF6B00;
   margin: -41px -41px -41px 20px;
   border: inherit;
   border-radius: inherit;
   transition: 0.4s ease-in-out;
+  padding: 40px;
+  transition-delay: -0.3s;
+}
+
+.selection-calc__result h3 {
+  color: #ffffff;
+  margin-top: 15px;
 }
 
 .active2 {
@@ -559,11 +562,25 @@ button {
 }
 
 .active {
-  display: block;
-  transition: 0.4s ease-in-out;
   opacity: 1;
+  max-width: 100%;
+  transition-delay: 0.4s;
+}
+
+.selection-calc-result__item {
+  margin-top: 35px;
   width: 100%;
   display: flex;
+}
+
+.selection-calc-result__item h4 {
+  color: #ffffff;
+}
+
+.dots {
+  width: 100%;
+  max-width: 300px;
+  border-bottom: 2px dotted #ffffff;
 }
 
 footer {

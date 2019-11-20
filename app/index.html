@@ -191,6 +191,7 @@
 		<div class="container">
 			<div class="selection__inner">
 				<h2>Подбор световодов</h2>
+				
 				<!-- <div class="selection-inner__calc">
 
 					<div class="selection-inner__text">
@@ -275,7 +276,110 @@
 					</div>
 
 				</div> -->
-				
+
+				<div class="selection__calc">
+					<div class="selection-calc__form">
+						<div class="selection-calc-form__item">
+							<p>Название здания</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<select name="type" id="type">
+								<option value="1">Производственное</option>
+								<option value="2">Техническое</option>
+								<option value="3">Производственное</option>
+								<option value="4">Производственное</option>
+							</select>
+						</div>
+						<div class="selection-calc-form__item">
+							<p>Площадь помещения</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<select name="space" id="space">
+								<option value="1">до 50 кв. м</option>
+								<option value="2">до 150 кв. м</option>
+								<option value="3">до 250 кв. м</option>
+								<option value="4">до 500 кв. м</option>
+							</select>
+						</div>
+						<div class="selection-calc-form__item">
+							<p>Высота этажа</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-h_1" type="radio" name="height">
+								<label class="selection-form-radio__label" for="radio-h_1">до 3х м</label>
+							</div>
+
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-h_2" type="radio" name="height">
+								<label class="selection-form-radio__label" for="radio-h_2">более 3х м</label>
+							</div>
+						</div>
+						<div class="selection-calc-form__item">
+							<p>Система проветривания (вентиляция)</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-vent_1" type="radio" name="ventilation">
+								<label class="selection-form-radio__label" for="radio-vent_1">Да</label>
+							</div>
+
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-vent_2" type="radio" name="ventilation">
+								<label class="selection-form-radio__label" for="radio-vent_2">Нет</label>
+							</div>
+						</div>
+						<div class="selection-calc-form__item">
+							<p>Искусственное освещение</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-light_1" type="radio" name="light">
+								<label class="selection-form-radio__label" for="radio-light_1">Да</label>
+							</div>
+
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-light_2" type="radio" name="light">
+								<label class="selection-form-radio__label" for="radio-light_2">Нет</label>
+							</div>
+						</div>
+						<div class="selection-calc-form__item">
+							<p>Монтаж через этаж</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-across_1" type="radio" name="across">
+								<label class="selection-form-radio__label" for="radio-across_1">Да</label>
+							</div>
+
+							<div class="selection-form-radio__item">
+								<input class="selection-form-radio__input" id="radio-across_2" type="radio" name="across">
+								<label class="selection-form-radio__label" for="radio-across_2">Нет</label>
+							</div>	
+						</div>
+						<div class="selection-calc-form__item">
+							<p>Ваш город или широта</p>
+						</div>
+						<div class="selection-calc-form__item">
+							<input class="selection-form__town" placeholder="Ваш город" type="text">
+						</div>
+						<div class="selection-calc-form__item"></div>
+						<div class="selection-calc-form__btn">
+							<button id="selection-choose">Подобрать световод</button>
+						</div>
+					</div>
+					
+					<div class="selection-calc__result">
+						<h3>Расчет количества световодов</h3>
+						<div class="selection-calc-result__item">
+							<h4>Световод SW 250</h4>
+							<div class="dots"></div>
+							<h4 class="calc__results">999</h4>
+							<h4>шт</h4>
+						</div>
+					</div>
+
+				</div>
 
 			</div>
 		</div>
