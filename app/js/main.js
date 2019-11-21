@@ -5,4 +5,9 @@ $(function(){
     $('.selection__calc').toggleClass('active2');
   });
 
+  $('.header-mob__burg-btn').on('click', function() {
+    $('.header-mob__burg').toggleClass('activeburg');
+  });
+
 });
+

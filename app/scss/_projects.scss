@@ -57,3 +57,24 @@
       margin: 18px 16px 0 16px;
     }
 }
+
+@media (max-width: 1020px) {
+  .project-inner__items {
+    display: flex;
+    height: 312px;
+    margin: 50px -7px 0 -7px;
+    overflow: hidden;
+  }
+  .project-inner__item {
+    margin: 0 7px;
+    min-width: 210px;
+    h4 {
+      font-size: 14px;
+      margin: 7px 8px 0 8px;
+    }
+    p {
+      font-size: 11px;
+      margin: 7px 8px 0 8px;
+    }
+  }
+}

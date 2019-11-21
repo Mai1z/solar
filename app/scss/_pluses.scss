@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 60px;
-    h2 {
-      margin-right: 90px;
-    }
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
     button {
       background-color: transparent;
       color: $main-font-color;
@@ -23,7 +23,7 @@
 
 .pluses-inner__items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: 70px 70px;
   grid-gap: 50px 30px;
 }
@@ -41,4 +41,29 @@
       max-width: 100%;
       max-height: 100%;     
     }
+}
+
+@media (max-width: 1020px) {
+  .pluses__inner {
+    padding: 20px 0 40px 0;
+  }
+  .pluses-inner__head {
+    flex-wrap: wrap;
+      h2 {
+        margin-top: 30px;
+      }
+      button {
+        margin-top: 30px;
+        padding: 10px 30px;
+      }
+  }
+}
+
+@media (max-width: 590px) {
+  .pluses-inner__head {
+      button {
+        width: 100%;
+        max-width: 300px;
+      }
+  }
 }
