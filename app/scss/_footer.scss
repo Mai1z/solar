@@ -8,6 +8,7 @@ footer {
 .footer {
   padding: 20px 0 40px 0;
     p {
+      padding-right: 220px;
       font-size: 11px;
       color: $second-bgcolor;
       margin-top: -25px;
@@ -47,11 +48,19 @@ footer {
     }
     h4 {
       margin-top: 15px;
+      cursor: pointer;
     }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
     p {
       font-size: 12px;
       margin-bottom: 17px;
       margin-top: 10px;
+      padding-right: 0;
     }
     a {
       font-size: 18px;
@@ -73,4 +82,68 @@ footer {
     object {
       margin-right: 20px;
     }
+}
+
+@media (max-width: 1020px) {
+  .footer__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+      ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s linear;
+      }
+  }
+
+  .footer
+  p {
+    padding-right: 0;
+    margin-top: 20px;
+  }
+
+  .footer__item {
+    h4 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      transition: 0.2s linear;
+        &:after {
+          content: "\e903";
+          font-family: 'icomoon';
+          color: $main-bgcolor;
+          font-size: 15px;
+          margin-left: 10px;
+          top: 4px;
+          position: absolute;
+          transform: rotate(90deg);
+          transition: 0.2s linear;
+        }
+    }
+    h3 {
+      margin-top: 10px;
+    }
+    p {
+      font-size: 12px;
+      margin-bottom: 17px;
+      margin-top: 10px;
+    }
+  }
+
+  .footer__wrap.activefoot {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .footer__item.activefoot {
+    ul {
+      max-height: 140px;
+    }
+  }
+
+  .footer-item__social {
+    margin-top: 25px;
+  }
+
 }

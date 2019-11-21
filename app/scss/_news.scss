@@ -3,17 +3,15 @@
 
 .news__inner {
   margin-bottom: 120px;
-    h2 {
-      margin-bottom: 45px;
-    }
 }
 
 .news-inner__head {
   display: flex;
+  align-items: center;
+  margin-bottom: 45px;
 }
 
 .news-inner-head.circle {
-  margin-top: -10px;
   margin-left: 30px;
 }
 
@@ -23,7 +21,6 @@
 }
 
 .news-inner__item {
-  width: 100%;
   max-width: 300px;
   min-height: 178px;
   border-radius: 20px;
@@ -54,3 +51,11 @@
     }
 }
 
+@media (max-width: 1020px) {
+  .news-inner__items {
+    overflow: hidden;
+  }
+  .news-inner__item {
+    min-width: 210px;
+  }
+}

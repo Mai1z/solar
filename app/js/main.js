@@ -9,5 +9,13 @@ $(function(){
     $('.header-mob__burg').toggleClass('activeburg');
   });
 
+  $('.footer__wrap').on('click', function() {
+    $(this).toggleClass('activefoot');
+  });
+
+  $('.footer__item').on('click', function() {
+    $(this).toggleClass('activefoot');
+  });
+
 });
 

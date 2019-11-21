@@ -195,3 +195,10 @@
       padding: 14px 48px;
     }
 }
+
+@media (max-width: 1020px) {
+  .selection__inner {
+    display: none;
+  }
+}
+
