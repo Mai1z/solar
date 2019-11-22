@@ -137,6 +137,11 @@ footer {
   }
 
   .footer__item.activefoot {
+    h4 {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
     ul {
       max-height: 140px;
     }
