@@ -319,6 +319,80 @@ select {
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
 
+.header-wrapper {
+  position: absolute;
+  background-color: #33323B;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100vh;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: 0.8s ease-in-out;
+  padding: 10px 20px 0 20px;
+  transition-delay: 0.3s;
+}
+
+.header-wrapper.activewrap {
+  transform: translateX(0%);
+}
+
+.header-wrapper__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-wrapper__btn {
+  margin-top: 5px;
+  position: relative;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #C4C4C4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header-wrapper__btn:before {
+  width: 20px;
+  height: 2px;
+  background-color: #C4C4C4;
+  position: absolute;
+  top: 18px;
+  left: 9px;
+  display: block;
+  content: '';
+  transform: rotate(45deg);
+  transition: 0.4s ease-in-out;
+}
+
+.header-wrapper__btn:after {
+  width: 20px;
+  height: 2px;
+  background-color: #C4C4C4;
+  position: absolute;
+  top: 18px;
+  left: 9px;
+  display: block;
+  content: '';
+  transform: rotate(-45deg);
+  transition: 0.4s ease-in-out;
+}
+
+.header-wrapper__btn.closewrap {
+  opacity: 0;
+}
+
+.header-wrapper__btn.closewrap:before {
+  transform: rotate(0deg);
+}
+
+.header-wrapper__btn.closewrap:after {
+  transform: rotate(0deg);
+}
+
 @media (max-width: 1020px) {
   .header {
     display: none;
@@ -980,11 +1054,12 @@ p {
 }
 
 .documents__inner {
-  padding: 60px 0 130px 0;
+  padding: 60px 0 100px 0;
 }
 
 .documents__inner h1 {
   margin-left: 15px;
+  margin-bottom: 40px;
 }
 
 .documents-inner__nav {
@@ -1066,6 +1141,15 @@ p {
   justify-content: center;
 }
 
+.digital__slider button {
+  display: none;
+  margin-bottom: 30px;
+  background-color: transparent;
+  color: #33323B;
+  border: 1px solid #FF6B00;
+  padding: 12px 56px;
+}
+
 .digital__slider ul {
   display: flex;
   list-style-type: none;
@@ -1106,4 +1190,36 @@ p {
   position: absolute;
   left: -35px;
   top: 1px;
+}
+
+@media (max-width: 590px) {
+  .documents-inner__nav {
+    display: none;
+  }
+  .documents__inner {
+    padding: 30px 0 40px 0;
+  }
+  .documents__inner h1 {
+    margin-left: 15px;
+  }
+  .documents-inner__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5px;
+  }
+  .documents-inner__item a {
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+  .documents-inner__items {
+    margin-bottom: 10px;
+  }
+  .digital__slider {
+    flex-direction: column;
+    align-items: center;
+  }
+  .digital__slider button {
+    display: block;
+  }
 }
