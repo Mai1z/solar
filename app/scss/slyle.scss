@@ -121,7 +121,6 @@ select {
 	width: 100%;
 	margin: 0 auto; 
 	padding: 0 10px;
-	overflow: hidden;
 }
 
 .grey {
@@ -145,6 +144,10 @@ select {
 			left: 35%;
 			top: 40%;
 		}
+}
+
+.fixed {
+	overflow: hidden;
 }
 
 @media (max-width: 1020px) {
