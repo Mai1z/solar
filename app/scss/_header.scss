@@ -167,6 +167,9 @@
   padding: 10px 20px 30px 20px;
   background-color: #33323B;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header-wrapper__items {
