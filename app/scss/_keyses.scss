@@ -1,0 +1,38 @@
+
+// ===== Кейсы =====
+
+.keyses__inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.keyses__nav {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  margin-top: 40px;
+    li {
+      margin-right: 20px;
+      margin-bottom: 20px;
+        a {
+          text-transform: none;
+          padding: 10px 17px;
+          white-space: nowrap;
+            &:hover {
+              box-shadow: 0px 0px 15px rgba(51, 50, 59, 0.2);
+              border-radius: 50px;
+            }
+        }
+    }
+}
+
+.keyses-projects__items {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: repeat(4, autofill(270px));
+  
+}
+
+.keyses-projects__item {
+  border: 1px solid grey;
+}

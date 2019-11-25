@@ -144,20 +144,29 @@
     }
 }
 
-.header-wrapper {
+.header-mobmenu {
   position: absolute;
-  background-color: $main-font-color;
   top: 0;
   left: 0;
-  width: 90%;
+  width: 100%;
   min-height: 750px;
   height: 100vh;
   z-index: 2;
   transform: translateX(-100%);
-  transition: 0.8s ease-in-out;
-  padding: 10px 20px 0 20px;
+  transition: 0.8s linear;
   transition-delay: 0.3s;
+  background-color: transparent;
+}
 
+.header-mobmenu.activewrap {
+  transform: translateX(0%);
+}
+
+.header-wrapper {
+  width: 90%;
+  padding: 10px 20px 30px 20px;
+  background-color: #33323B;
+  height: 100vh;
 }
 
 .header-wrapper__items {

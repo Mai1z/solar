@@ -53,7 +53,13 @@
 
 @media (max-width: 1020px) {
   .news-inner__items {
-    overflow: hidden;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .news-inner__items::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   .news-inner__item {
     min-width: 210px;

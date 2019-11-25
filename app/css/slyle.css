@@ -85,6 +85,9 @@ body {
   font-size: 12px;
   font-weight: 300;
   margin: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 header {
@@ -322,19 +325,29 @@ select {
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
 
-.header-wrapper {
+.header-mobmenu {
   position: absolute;
-  background-color: #33323B;
   top: 0;
   left: 0;
-  width: 90%;
+  width: 100%;
   min-height: 750px;
   height: 100vh;
   z-index: 2;
   transform: translateX(-100%);
-  transition: 0.8s ease-in-out;
-  padding: 10px 20px 0 20px;
+  transition: 0.8s linear;
   transition-delay: 0.3s;
+  background-color: transparent;
+}
+
+.header-mobmenu.activewrap {
+  transform: translateX(0%);
+}
+
+.header-wrapper {
+  width: 90%;
+  padding: 10px 20px 30px 20px;
+  background-color: #33323B;
+  height: 100vh;
 }
 
 .header-wrapper__items {
@@ -633,7 +646,13 @@ select {
     display: flex;
     height: 312px;
     margin: 50px -7px 0 -7px;
-    overflow: hidden;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .project-inner__items::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   .project-inner__item {
     margin: 0 7px;
@@ -780,7 +799,13 @@ select {
 
 @media (max-width: 1020px) {
   .news-inner__items {
-    overflow: hidden;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .news-inner__items::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   .news-inner__item {
     min-width: 210px;
@@ -1310,4 +1335,42 @@ p {
   .digital__slider button {
     display: block;
   }
+}
+
+.keyses__inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.keyses__nav {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.keyses__nav li {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.keyses__nav li a {
+  text-transform: none;
+  padding: 10px 17px;
+  white-space: nowrap;
+}
+
+.keyses__nav li a:hover {
+  box-shadow: 0px 0px 15px rgba(51, 50, 59, 0.2);
+  border-radius: 50px;
+}
+
+.keyses-projects__items {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: repeat(4, autofill(270px));
+}
+
+.keyses-projects__item {
+  border: 1px solid grey;
 }
