@@ -1,0 +1,78 @@
+
+// ======= Используемое оборудование ======
+
+.instuments {
+  background-image: url(../img/realised-projects/bg.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.instruments__inner {
+  padding: 55px 0;
+    h2 {
+      color: $second-font-color;
+      margin-bottom: 65px;
+        &:before {
+          background-color: $second-font-color;
+        }
+    }
+}
+
+.instuments__items {
+  display: flex;
+  height: 360px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.instuments__items::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.instuments__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 270px;
+  min-width: 210px;
+  margin-right: 30px;
+  padding: 25px 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      max-width: 175px;
+      max-height: 240px;
+      margin-bottom: 15px;
+    }
+    h4 {
+      text-align: center;
+    }
+}
+
+@media (max-width: 1020px) {
+  .instruments__inner {
+    padding: 30px 0;
+      h2 {
+        margin-bottom: 30px;
+      }
+  }
+  .instuments__items {
+    height: 335px;
+  }
+  .instuments__item {
+    margin-right: 15px;
+    padding: 17px 17px;
+      img {
+        border-radius: 20px;
+      }
+      h4 {
+        font-size: 14px;
+      }
+  }
+}

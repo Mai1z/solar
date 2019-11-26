@@ -1,0 +1,90 @@
+
+// ======= Объект детский сад ======
+
+.line-links__inner {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  ul {
+    list-style-type: none;
+    display: flex;
+      li {
+        margin-right: 35px;
+        text-decoration: underline;
+        position: relative;
+          &:after {
+            content: '\e900';
+            font-family: icomoon;
+            position: absolute;
+            right: -24px;
+            top: 4px;
+            font-size: 9px;
+          }
+          &:last-child {
+            text-decoration: none;
+              &:after {
+                content: '';
+              }
+          }
+          a {
+            text-transform: none;
+            font-size: 11px;
+          }
+      }
+    }
+}
+
+.object__inner {
+    h1 {
+      margin-bottom: 50px;
+      margin-left: 15px;
+    }
+}
+
+.object__items {
+  display: flex;
+  margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 470px;
+      max-height: 360px;
+      border-radius: 20px;
+    }
+}
+
+.object-items__text {
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 100%;
+  min-width: 400px;
+    p {
+      margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1020px) {
+  .object__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .object-items__text  {
+    margin-top: 10px;
+    padding-left: 0px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 590px) {
+  .line-links {
+    display: none;
+  }
+  .object__inner {
+    h1 {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }
+  .object__items {
+    margin-bottom: 10px;
+  }
+}
