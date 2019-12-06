@@ -6,6 +6,18 @@
     h1 {
       margin-left: 15px;
     }
+    select {
+      box-shadow: 0px 0px 15px rgba(51, 50, 59, 0.2);
+      border-radius: 20px;
+      font-size: 18px;
+      font-family: $main-font;
+      font-weight: 300;
+      padding: 10px 24px;
+      border: none;
+      width: 100%;
+      max-width: 370px;
+      margin: 20px 0 10px 0;
+    }   
 }
 
 .lighter__nav {
@@ -20,9 +32,10 @@
       margin-right: 50px;
         a {
           text-transform: none;
-          margin-right: 20px;
+          margin-right: 5px;
           padding: 10px 24px;
           border-radius: 50px;
+          white-space: nowrap;
             &:hover {
               box-shadow: 0px 0px 15px rgba(51, 50, 59, 0.2);
             }
@@ -32,4 +45,22 @@
       white-space: nowrap;
       padding: 14px 40px;
     }
+}
+
+.lighter__select {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1020px) {
+  .lighter__nav {
+    display: none;
+  }
+  .lighter__inner {
+    margin-bottom: 20px;
+      h1 {
+        margin-top: 20px;
+      }
+  }
 }

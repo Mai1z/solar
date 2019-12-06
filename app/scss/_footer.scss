@@ -130,20 +130,9 @@ footer {
     }
   }
 
-  .footer__wrap.activefoot {
+  .footer__wrap.active {
     &:after {
       transform: rotate(180deg);
-    }
-  }
-
-  .footer__item.activefoot {
-    h4 {
-      &:after {
-        transform: rotate(180deg);
-      }
-    }
-    ul {
-      max-height: 140px;
     }
   }
 

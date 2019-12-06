@@ -31,13 +31,22 @@ $('.catalog__btn').on('click', function() {
 
 // ===== Списки футера =====  
 
-$('.footer__wrap').on('click', function() {
-	$(this).toggleClass('activefoot');
-});
+let acc = document.getElementsByClassName("footer__wrap");
+let i;
 
-$('.footer__item').on('click', function() {
-	$(this).toggleClass('activefoot');
-});
+for (i=0; i<acc.length; i++) {
+  acc[i].addEventListener ("click", function () {
+    this.classList.toggle("active");
+
+    let panel = this.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 
 
 

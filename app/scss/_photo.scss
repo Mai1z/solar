@@ -45,3 +45,15 @@
     height: 0;
   }
 }
+
+@media (max-width: 590px) {
+  .photo__inner {
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+  }
+  .photo__items {
+    margin-bottom: 20px;
+  }
+} 
