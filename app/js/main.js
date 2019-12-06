@@ -1,4 +1,6 @@
 
+$('select').styler();
+
 // ===== Калькулятор =====
 
 $('#selection-choose').on('click', function() {
@@ -47,6 +49,9 @@ for (i=0; i<acc.length; i++) {
     }
   });
 }
+
+
+
 
 
 

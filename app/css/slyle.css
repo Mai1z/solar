@@ -331,7 +331,7 @@ select {
   width: 100%;
   min-height: 750px;
   height: 100vh;
-  z-index: 2;
+  z-index: 12;
   transform: translateX(-100%);
   transition: 0.8s linear;
   transition-delay: 0.3s;
@@ -865,13 +865,6 @@ select {
   font-size: 15px;
 }
 
-.selection-calc-form__item select {
-  padding: 10px 18px;
-  border-radius: 30px;
-  border: 1px solid #C4C4C4;
-  width: 100%;
-}
-
 .selection-calc-form__btn {
   display: flex;
   align-items: flex-end;
@@ -1030,6 +1023,151 @@ select {
   right: 0;
   top: 0;
   padding: 14px 48px;
+}
+
+.jq-selectbox {
+  width: 100%;
+  height: auto;
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: 1px solid #C4C4C4;
+}
+
+.jq-selectbox__select {
+  background: none;
+  border: 1px solid #C4C4C4;
+  box-shadow: none;
+  font-family: "Proxima Nova";
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  padding: 4px 18px;
+  font-weight: 300;
+}
+
+.jq-selectbox__select:hover {
+  background: none;
+  box-shadow: none;
+  font-family: "Proxima Nova";
+}
+
+.jq-selectbox__trigger-arrow {
+  transition: 0.2s linear;
+}
+
+.jq-selectbox.dropdown.opened .jq-selectbox__trigger-arrow {
+  transform: rotate(90deg);
+  transition: 0.2s linear;
+}
+
+.jq-selectbox.dropup.opened .jq-selectbox__trigger-arrow {
+  transform: rotate(180deg);
+  transition: 0.2s linear;
+}
+
+.jq-selectbox.dropdown.opened .jq-selectbox__select {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom: none;
+}
+
+.jq-selectbox.dropup.opened .jq-selectbox__select {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top: none;
+}
+
+.jq-selectbox.dropdown.opened + .header-inner-search {
+  border-bottom-right-radius: 0;
+}
+
+.jq-selectbox__select-text {
+  width: 100% !important;
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 100%;
+  border: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #C4C4C4;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.jq-selectbox:hover .jq-selectbox__trigger-arrow {
+  border-top: 8px solid #FF6B00;
+}
+
+.jq-selectbox__dropdown {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #C4C4C4;
+  box-shadow: none;
+  width: 100% !important;
+  margin: 2px 0px 0;
+  margin-top: -1px;
+}
+
+.jq-selectbox.dropdown.opened .jq-selectbox__dropdown {
+  border-top: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.jq-selectbox.dropup.opened .jq-selectbox__dropdown {
+  border-bottom: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.jq-selectbox li {
+  padding: 10px 18px 14px;
+}
+
+.jq-selectbox li:hover {
+  background-color: #33323B;
+  color: #fff;
+}
+
+.jq-selectbox li:hover:last-child {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.jq-selectbox.jq-selectbox.dropdown.opened li.selected {
+  background-color: #FF6B00;
+}
+
+.jq-selectbox.jq-selectbox.dropdown.opened li.selected:last-child {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.jq-selectbox.jq-selectbox.dropup.opened li.selected {
+  background-color: #FF6B00;
+}
+
+.jq-selectbox.jq-selectbox.dropup.opened li.selected:first-child {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 @media (max-width: 1020px) {
@@ -1722,12 +1860,8 @@ p {
   margin-left: 15px;
 }
 
-.catalog__top-line select {
-  width: 270px;
-  height: 40px;
-  border-radius: 50px;
-  border: 1px solid #C4C4C4;
-  padding: 12px 19px;
+.catalog__top-line .jq-selectbox {
+  max-width: 270px;
   margin-left: 30px;
 }
 
@@ -1740,14 +1874,16 @@ p {
     flex-wrap: wrap;
     margin: 35px 0px 30px 0;
   }
-  .catalog__top-line select {
+  .catalog__top-line .jq-selectbox {
     margin-top: 20px;
+    margin-left: 0;
   }
 }
 
 @media (max-width: 590px) {
-  .catalog__top-line select {
-    margin-left: 0;
+  .catalog__top-line .jq-selectbox {
+    margin-top: 20px;
+    max-width: 100%;
   }
 }
 
@@ -1949,6 +2085,7 @@ p {
   }
   .lighter__inner h1 {
     margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
 

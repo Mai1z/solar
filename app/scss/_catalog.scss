@@ -8,14 +8,10 @@
     h1 {
       margin-left: 15px;
     }
-    select {
-      width: 270px;
-      height: 40px;
-      border-radius: 50px;
-      border: 1px solid #C4C4C4;
-      padding: 12px 19px;
-      margin-left: 30px;
-    }
+  .jq-selectbox {
+    max-width: 270px;
+    margin-left: 30px;
+  }  
 }
 
 .documents-inner__nav {
@@ -26,16 +22,18 @@
   .catalog__top-line {
     flex-wrap: wrap;
     margin: 35px 0px 30px 0;
-      select {
-        margin-top: 20px;
-      }
+    .jq-selectbox {
+      margin-top: 20px;
+      margin-left: 0;
+    }
   }
 }
 
 @media (max-width: 590px) {
   .catalog__top-line {
-    select {
-      margin-left: 0;
+    .jq-selectbox {
+      margin-top: 20px;
+      max-width: 100%;
     }
   }
 }
